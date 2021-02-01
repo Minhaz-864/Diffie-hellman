@@ -9,7 +9,7 @@ long long int power(long long int a, long long int b, long long int q) //a ^ b m
     if (b == 1)
         return a;
  
-    else
+    else //this here does the a^b mod q part
         {   dato=a;
             while(--b)
                 dato *= b, dato %=q;
@@ -17,11 +17,11 @@ long long int power(long long int a, long long int b, long long int q) //a ^ b m
             
         }
 }
-int randomstuff(){
-    
+/*int randomstuff(){
+    //randomly selects a srand condition to get a very random position 
     int rnd_val = rand()+time(0);
     srand(rnd_val);
-}
+}*/
 int prinu(){//get prime number
 
 
@@ -39,7 +39,7 @@ int printRandomsA()
    srand (time(0));
    
     bal2 = rand();
-    printf("bal:%d\n",bal2);
+    //printf("bal:%d\n",bal2);
     
     numa = (bal2 % q ) + 1;  
     return numa;
@@ -53,7 +53,7 @@ int printRandomsB()
     bal1 = rand()+rand();
     printf("bal:%d\n",bal1);
     
-    numb = (bal1 % q ) + 1;  
+    //numb = (bal1 % q ) + 1;  
     return (int) numb;
 
 }
